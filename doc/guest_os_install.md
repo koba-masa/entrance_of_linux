@@ -42,9 +42,9 @@
 |未割り当て||||
 
 #### ネットワークアダプタの作成
-![ネットワークアダプタの作成](doc/images/guest_os_install/create_network_ adapter_1.png)
-![アダプタの設定](doc/images/guest_os_install/create_network_ adapter_2.png)
-![DHCPサーバの有効か](doc/images/guest_os_install/create_network_ adapter_3.png)
+![ネットワークアダプタの作成](images/guest_os_install/create_network_adapter_1.png)
+![アダプタの設定](images/guest_os_install/create_network_adapter_2.png)
+![DHCPサーバの有効化](images/guest_os_install/create_network_adapter_3.png)
 
 ## OSのインストール
 ### ソフトウェアの選択
