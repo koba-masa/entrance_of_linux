@@ -26,5 +26,42 @@
 ![ディスクイメージの読み込み](images/guest_os_install/set_disk_2.png)
 ![ディスクイメージの読み込み](images/guest_os_install/set_disk_3.png)
 
-## OSのインストール
+### ネットワークの設定
+#### ネットワークの割り当て
+![ネットワークの割り当て](images/guest_os_install/activate_network.png)
 
+|項目|概要|概要|備考|
+|:--|:--|:--|:--|
+|NAT|Network Address Translation|パケットヘッダに含まれるIPアドレスを別のIPアドレスに変換する||
+|ブリッジアダプター||||
+|内部ネットワーク||VirtualBox間のみでアクセスを許可する||
+|ホストオンリーアダプター||ホストからのアクセスのみ許可する||
+|汎用ドライバー||||
+|NATネットワーク||||
+|Cloud Network||||
+|未割り当て||||
+
+#### ネットワークアダプタの作成
+![ネットワークアダプタの作成](doc/images/guest_os_install/create_network_ adapter_1.png)
+![アダプタの設定](doc/images/guest_os_install/create_network_ adapter_2.png)
+![DHCPサーバの有効か](doc/images/guest_os_install/create_network_ adapter_3.png)
+
+## OSのインストール
+### ソフトウェアの選択
+- ベース環境を確認する
+```
+$ yum groups list
+```
+- インストールされるパッケージを確認する
+```
+$ yum groups info <ベース環境>
+```
+
+## ユーザの設定
+#### rootユーザ
+- パスワード: `#eDcVfR4`
+
+#### 一般ユーザ
+- フルネーム：適当
+- ユーザ名：`testuser`
+- パスワード：`3EdCvFr$`
