@@ -48,18 +48,18 @@ $ su -
 ### コマンド
 #### 現在の設定を確認する
 ```
-$ getenforce
+# getenforce
 ```
 
 #### 現在の設定を一時的に変更する
 - 無効化する
 ```
-$ setenforce 0
+# setenforce 0
 ```
 
 - 有効化する
 ```
-$ setenforce 1
+# setenforce 1
 ```
 
 #### 永続的に反映する
@@ -107,11 +107,11 @@ $ setenforce 1
 - これが起動していないとsshによるログインはできない
 
 ### 設定ファイル
-- `/etc/sshsshd_config`
+- `/etc/ssh/sshd_config`
 
 #### rootユーザでのログインを禁止する
 ```
-# vi /etc/sshsshd_config
+# vi /etc/ssh/sshd_config
 ```
 - 以下の項目を`no`に変更する
    - `PermitRootLogin  yes`
@@ -119,3 +119,40 @@ $ setenforce 1
 ```
 # systemctl restart sshd.service
 ```
+
+## ファイアーウォールの設定を変更する
+### 設定ファイルの配置場所
+- `/usr/lib/firewalld/services/`
+
+### ファイアーウォールの設定を確認する
+```
+# firewall-cmd --list-all
+```
+
+### 既存のサービス設定を削除する
+```
+# firewall-cmd --permanent --remove-service=<サービス名>
+```
+
+### サービス設定を追加する
+```
+# firewall-cmd --permanent --add-service=<サービス名>
+```
+
+### ファイアーウォールの設定を反映する
+```
+# firewall-cmd --reload
+```
+
+## 一般ユーザに管理権限を必要とするコマンドを実行する
+### 設定ファイル
+- `/etc/sudoers`
+- `/etc/sudoers.d`
+
+#### 一般ユーザに権限を付与する
+```
+# visudo
+```
+- 以下の設定を追加する
+   - `<ユーザ名>　<ホスト>=<誰として> <許可するコマンド>`
+      - 例)`testuser ALL=(ALL) ALL, !userdel, !/sbin/userdel`
