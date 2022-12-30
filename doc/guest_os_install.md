@@ -48,9 +48,34 @@
 
 ## ログイン
 1. 作成した一般ユーザにてログインする
+![ゲストOSのインストール](/images/guest_os_install/03.png)
+
+## ゲストOSへログイン
+1. ホストOS側にてターミナルを起動する
+1. 以下のコマンドを実行する
+   ```sh
+   $ ssh testuser@192.168.56.2
+   ```
+1. パスワードプロンプトが表示されたら、パスワードを入力する
+   ```sh
+   testuser@192.168.56.2's password:
+   ```
+1. 以下のコマンドを実行する
+   ```sh
+   $ pwd
+   /home/testuser
+   ```
+
+## ゲストOSからログアウト
+1. 以下のコマンドを実行する
+   ```sh
+   $ exit
+   ログアウト
+   Connection to 192.168.56.2 closed.
+   ```
 
 ## ゲストOSの停止
-![ゲストOSのインストール](/images/guest_os_install/03.png)
+![ゲストOSのインストール](/images/guest_os_install/04.png)
 
 |選択肢|概要|備考|
 |:--|:--|:--|
