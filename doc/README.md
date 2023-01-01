@@ -5,3 +5,10 @@
    1. [仮想マシンの作成](/doc/virtual_machine_setting.md)
    1. [ネットワークの設定](/doc/network_setting.md)
 1. [ゲストOSのインストール](/doc/guest_os_install.md)
+1. [基本的なLinuxコマンドに触れる](/doc/basic_linux_command.md)
+   1. [ユーザ・グループ管理](/doc/user_and_group.md)
+   1. [ファイルのアクセス権と所有権](/doc/permission_and_owner.md)
+1. Linuxのファイルシステムについて
+1. サーバについて
+   1. ネットワークについて
+   1. Webサーバの構築
