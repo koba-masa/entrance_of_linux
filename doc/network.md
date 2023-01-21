@@ -14,11 +14,19 @@
    - 参考：[Wikipedia#IPアドレス](https://ja.wikipedia.org/wiki/IP%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9)
 
 ### NAT(Network Address Translation)
-
+- LAN内のコンピュータからインターネット上のコンピュータにアクセスする際に、プライベートIPアドレスをグローバルIPアドレスに変換する
+   ![NAT](/images/network/nat.png)
+- IPアドレスを変換する技術
+   - グローバルIPアドレス→プライベートIPアドレス
+   - プライベートIPアドレス→グローバルIPアドレス
 
 ### ポートフォワーディング（静的IPマスカレード）
-- インターネットから特定のポート宛に届いた通信を、指定したLAN側の機器に割り当てること
+- インターネットからLAN内のコンピュータにアクセスする際に、特定のポート宛に届いた通信を指定した機器に割り当てること
    ![ポートフォワーディング](/images/network/port_forwarding.png)
+
+### 参考
+- Wikipedia
+   - [パケット](https://ja.wikipedia.org/wiki/%E3%83%91%E3%82%B1%E3%83%83%E3%83%88)
 
 ## VirtualBoxのアダプタの種類
 ### ホストオンリーアダプター
