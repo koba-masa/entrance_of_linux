@@ -9,6 +9,8 @@
    1. [ユーザ・グループ管理](/doc/user_and_group.md)
    1. [ファイルのアクセス権と所有権](/doc/permission_and_owner.md)
 1. Linuxのファイルシステムについて
+1. [ネットワークについて](/doc/network.md)
 1. サーバについて
-   1. ネットワークについて
-   1. Webサーバの構築
+   1. SSHサーバ
+   1. DNSサーバ
+   1. Webサーバ
