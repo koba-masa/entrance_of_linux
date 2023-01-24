@@ -202,10 +202,29 @@
    touch test4.txt
    ```
 
+### ln
+- ハードリンクを作成する
+   ```sh
+   ln test4.txt test5.txt
+   ```
+- シンボリックリンクを作成する
+   ```sh
+   ln -s test4.txt test5.txt
+   ```
+
+#### ハードリンクとシンボリックリンク
+- [参考](https://linuc.org/study/samples/2424/)
+
 ### find
 - ファイルを検索する
    ```sh
-   find sample
+   find . -name "test4*"
+   ```
+
+### grep
+- ファイル内の文字を検索する
+   ```sh
+   grep "te" test.txt
    ```
 
 ### rm
@@ -216,6 +235,64 @@
 - 再起的に削除する(ディレクトリを削除する)
    ```sh
    rm -r sample
+   ```
+
+## ファイルの書庫化・圧縮・展開
+### tar
+- ファイルの書庫化をする
+   ```sh
+   tar cvf sample2.tar sample2
+   ```
+- 書庫化したファイルを展開する
+   ```sh
+   tar xvf sample2.tar sample2
+   ```
+
+### gzip
+- ファイルを圧縮する
+   ```sh
+   gzip test.txt
+   ```
+
+### gunzip
+- ファイルを展開する
+   ```sh
+   gunzip test.txt.gz
+   ```
+
+### tar + gzip
+- 書庫化と圧縮を同時に行う
+   ```sh
+   tar cvzf sample2.tar.gz sample2
+   ```
+
+## 特別なコマンドや処理
+### リダイレクト
+#### >
+- 標準出力をファイルに書き込む
+   ```sh
+   echo "redirect" > redirect.txt
+   ```
+
+#### >>
+- 標準出力をファイルに書き込む
+   ```sh
+   echo "redirect" >> redirect.txt
+   ```
+
+### |(パイプ)
+- 左辺の標準出力を右辺のコマンドに引き継ぐ
+
+#### grep
+- 標準出力の内容に対して、検索する
+   ```sh
+   ls -la | grep ".bash"
+   ```
+
+### xargs
+- 標準出力を読み込み、コマンドを生成し、実行する
+   ```sh
+   find . -name "redirect*" | xargs rm
    ```
 
 ## ファイル転送
